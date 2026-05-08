@@ -17,7 +17,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     if (!savedData){
         return;
     }
-    formData = savedData;
+    Object.assign(formData, savedData);
     formEl.elements.email.value = savedData.email;
     formEl.elements.message.value = savedData.message;
 });
